@@ -99,5 +99,24 @@ Below is the gist of how to instantiate and update SORT. See the ['__main__'](ht
 
     # track_bbs_ids is a np array where each row contains a valid bounding box and track_id (last column)
     ...
+### 1.修改说明：
+sort 算法中指定的2DMOT2015 下载太慢了，因此无法运行demo
+根据实际情况对sort.py做了一些修改，可以运行自己demo，同时可以
+接上目标检测网络实现实时检测跟踪
+
+### 2运行环境
+  win10, ubuntu也可以
+  
+### 3.修改
+
+- 把绘图matplotlib替换成cv，方便暂停
+
+- 可以使用自己的数据测试
+  
+  - 2DMOT2015数据下载过满，可以替换成自己的数据，或者开源数据。
+可以把目标检测开源数据集的真值转成2DMOT2015中标注的数据格式，然后可以
+运行自己demo了。这时候使用真值作为检测值。
+  
+- 可以接上目标检测网络实现多目标测和跟踪
     
  
